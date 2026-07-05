@@ -335,127 +335,21 @@
               <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M15.4 7.4 14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg>
             </button>
             <div class="pager-pages" role="tablist" aria-label="Conversion pairs">
-              <button class="pager-btn is-active" id="pager-neutral2angry" role="tab" aria-selected="true" aria-controls="conv-neutral2angry">Neutral &rarr; Angry</button>
-              <button class="pager-btn" id="pager-neutral2happy" role="tab" aria-selected="false" aria-controls="conv-neutral2happy">Neutral &rarr; Happy</button>
-              <button class="pager-btn" id="pager-neutral2sad" role="tab" aria-selected="false" aria-controls="conv-neutral2sad">Neutral &rarr; Sad</button>
-              <button class="pager-btn" id="pager-neutral2surprise" role="tab" aria-selected="false" aria-controls="conv-neutral2surprise">Neutral &rarr; Surprise</button>
-              <button class="pager-btn" id="pager-angry2neutral" role="tab" aria-selected="false" aria-controls="conv-angry2neutral">Angry &rarr; Neutral</button>
-              <button class="pager-btn" id="pager-happy2neutral" role="tab" aria-selected="false" aria-controls="conv-happy2neutral">Happy &rarr; Neutral</button>
+              <button class="pager-btn is-active" id="pager-neutral2sad" role="tab" aria-selected="true" aria-controls="conv-neutral2sad">Neutral &rarr; Sad</button>
               <button class="pager-btn" id="pager-sad2neutral" role="tab" aria-selected="false" aria-controls="conv-sad2neutral">Sad &rarr; Neutral</button>
+              <button class="pager-btn" id="pager-neutral2surprise" role="tab" aria-selected="false" aria-controls="conv-neutral2surprise">Neutral &rarr; Surprise</button>
               <button class="pager-btn" id="pager-surprise2neutral" role="tab" aria-selected="false" aria-controls="conv-surprise2neutral">Surprise &rarr; Neutral</button>
+              <button class="pager-btn" id="pager-neutral2angry" role="tab" aria-selected="false" aria-controls="conv-neutral2angry">Neutral &rarr; Angry</button>
+              <button class="pager-btn" id="pager-angry2neutral" role="tab" aria-selected="false" aria-controls="conv-angry2neutral">Angry &rarr; Neutral</button>
+              <button class="pager-btn" id="pager-neutral2happy" role="tab" aria-selected="false" aria-controls="conv-neutral2happy">Neutral &rarr; Happy</button>
+              <button class="pager-btn" id="pager-happy2neutral" role="tab" aria-selected="false" aria-controls="conv-happy2neutral">Happy &rarr; Neutral</button>
             </div>
             <button class="pager-arrow" id="pager-next" aria-label="Next conversion pair">
               <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8.6 16.6 10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg>
             </button>
           </div>
 
-          <div class="conv-page is-active" id="conv-neutral2angry" role="tabpanel" aria-labelledby="pager-neutral2angry">
-            <div class="sample-card">
-              <div class="sample-head">
-                <span class="pair">
-                  <span class="emo-chip emo-neutral">Neutral</span>
-                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
-                  <span class="emo-chip emo-angry">Angry</span>
-                </span>
-                <span class="source-audio">
-                  <span class="input-kind kind-source">Source &middot; input to all models</span>
-                  <audio controls preload="none" src="audio/baseline/neutral2angry/source.wav"></audio>
-                </span>
-              </div>
-              <div class="table-scroll">
-                <table class="io-table">
-                  <thead>
-                    <tr>
-                      <th>Model</th>
-                      <th>Model input</th>
-                      <th>Converted output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="io-model">SGEVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-angry">Angry</span><span class="spk-chip">Speaker 0012</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/sgevc.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">DurFlex-EVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-angry">Angry</span><span class="spk-chip">Speaker 0012</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/durflex.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">ZEST</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2angry/zest_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/zest.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">VEVO</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2angry/vevo_pt_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/vevo_pt.wav"></audio></td>
-                    </tr>
-                    <tr class="row-ours">
-                      <td class="io-model">TRACE-EVC (Ours)</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Sharpen it until it sounds <strong>angrier</strong>, the vowels bitten, a half-beat of pressure before each word, <strong>held taut</strong>.&rdquo;</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/ours.wav"></audio></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="conv-page" id="conv-neutral2happy" role="tabpanel" aria-labelledby="pager-neutral2happy">
-            <div class="sample-card">
-              <div class="sample-head">
-                <span class="pair">
-                  <span class="emo-chip emo-neutral">Neutral</span>
-                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
-                  <span class="emo-chip emo-happy">Happy</span>
-                </span>
-                <span class="source-audio">
-                  <span class="input-kind kind-source">Source &middot; input to all models</span>
-                  <audio controls preload="none" src="audio/baseline/neutral2happy/source.wav"></audio>
-                </span>
-              </div>
-              <div class="table-scroll">
-                <table class="io-table">
-                  <thead>
-                    <tr>
-                      <th>Model</th>
-                      <th>Model input</th>
-                      <th>Converted output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="io-model">SGEVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-happy">Happy</span><span class="spk-chip">Speaker 0018</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/sgevc.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">DurFlex-EVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-happy">Happy</span><span class="spk-chip">Speaker 0018</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/durflex.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">ZEST</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2happy/zest_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/zest.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">VEVO</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2happy/vevo_pt_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/vevo_pt.wav"></audio></td>
-                    </tr>
-                    <tr class="row-ours">
-                      <td class="io-model">TRACE-EVC (Ours)</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Brighten it so <strong>a little more joy comes through</strong>, eyes soft, the voice <strong>opening like a window left ajar</strong>, no tempo shift.&rdquo;</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/ours.wav"></audio></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="conv-page" id="conv-neutral2sad" role="tabpanel" aria-labelledby="pager-neutral2sad">
+          <div class="conv-page is-active" id="conv-neutral2sad" role="tabpanel" aria-labelledby="pager-neutral2sad">
             <div class="sample-card">
               <div class="sample-head">
                 <span class="pair">
@@ -502,165 +396,6 @@
                       <td class="io-model">TRACE-EVC (Ours)</td>
                       <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Drag it lower, <strong>growing more downcast</strong>, <strong>weary and flat</strong>, the voice sinking like ash.&rdquo;</span></span></div></td>
                       <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2sad/ours.wav"></audio></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="conv-page" id="conv-neutral2surprise" role="tabpanel" aria-labelledby="pager-neutral2surprise">
-            <div class="sample-card">
-              <div class="sample-head">
-                <span class="pair">
-                  <span class="emo-chip emo-neutral">Neutral</span>
-                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
-                  <span class="emo-chip emo-surprised">Surprise</span>
-                </span>
-                <span class="source-audio">
-                  <span class="input-kind kind-source">Source &middot; input to all models</span>
-                  <audio controls preload="none" src="audio/baseline/neutral2surprise/source.wav"></audio>
-                </span>
-              </div>
-              <div class="table-scroll">
-                <table class="io-table">
-                  <thead>
-                    <tr>
-                      <th>Model</th>
-                      <th>Model input</th>
-                      <th>Converted output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="io-model">SGEVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-surprised">Surprise</span><span class="spk-chip">Speaker 0016</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/sgevc.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">DurFlex-EVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-surprised">Surprise</span><span class="spk-chip">Speaker 0016</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/durflex.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">ZEST</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2surprise/zest_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/zest.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">VEVO</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2surprise/vevo_pt_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/vevo_pt.wav"></audio></td>
-                    </tr>
-                    <tr class="row-ours">
-                      <td class="io-model">TRACE-EVC (Ours)</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Jolt it &mdash; <strong>noticeably more startled</strong>, <strong>sharper</strong>, breath catching mid-phrase, eyes snapping open.&rdquo;</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/ours.wav"></audio></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="conv-page" id="conv-angry2neutral" role="tabpanel" aria-labelledby="pager-angry2neutral">
-            <div class="sample-card">
-              <div class="sample-head">
-                <span class="pair">
-                  <span class="emo-chip emo-angry">Angry</span>
-                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
-                  <span class="emo-chip emo-neutral">Neutral</span>
-                </span>
-                <span class="source-audio">
-                  <span class="input-kind kind-source">Source &middot; input to all models</span>
-                  <audio controls preload="none" src="audio/baseline/angry2neutral/source.wav"></audio>
-                </span>
-              </div>
-              <div class="table-scroll">
-                <table class="io-table">
-                  <thead>
-                    <tr>
-                      <th>Model</th>
-                      <th>Model input</th>
-                      <th>Converted output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="io-model">SGEVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0016</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/sgevc.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">DurFlex-EVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0016</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/durflex.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">ZEST</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/angry2neutral/zest_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/zest.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">VEVO</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/angry2neutral/vevo_pt_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/vevo_pt.wav"></audio></td>
-                    </tr>
-                    <tr class="row-ours">
-                      <td class="io-model">TRACE-EVC (Ours)</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Cool it down until it settles <strong>calmer than before</strong>, <strong>steadier and softer</strong>, a warmer timbre beneath the surface.&rdquo;</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/ours.wav"></audio></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="conv-page" id="conv-happy2neutral" role="tabpanel" aria-labelledby="pager-happy2neutral">
-            <div class="sample-card">
-              <div class="sample-head">
-                <span class="pair">
-                  <span class="emo-chip emo-happy">Happy</span>
-                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
-                  <span class="emo-chip emo-neutral">Neutral</span>
-                </span>
-                <span class="source-audio">
-                  <span class="input-kind kind-source">Source &middot; input to all models</span>
-                  <audio controls preload="none" src="audio/baseline/happy2neutral/source.wav"></audio>
-                </span>
-              </div>
-              <div class="table-scroll">
-                <table class="io-table">
-                  <thead>
-                    <tr>
-                      <th>Model</th>
-                      <th>Model input</th>
-                      <th>Converted output</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="io-model">SGEVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0014</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/sgevc.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">DurFlex-EVC</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0014</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/durflex.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">ZEST</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/happy2neutral/zest_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/zest.wav"></audio></td>
-                    </tr>
-                    <tr>
-                      <td class="io-model">VEVO</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/happy2neutral/vevo_pt_ref.wav"></audio></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/vevo_pt.wav"></audio></td>
-                    </tr>
-                    <tr class="row-ours">
-                      <td class="io-model">TRACE-EVC (Ours)</td>
-                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Make the audio <strong>slightly quieter</strong>, <strong>flatter and more even</strong>, with a warm stillness beneath the voice.&rdquo;</span></span></div></td>
-                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/ours.wav"></audio></td>
                     </tr>
                   </tbody>
                 </table>
@@ -720,6 +455,59 @@
               </div>
             </div>
           </div>
+          <div class="conv-page" id="conv-neutral2surprise" role="tabpanel" aria-labelledby="pager-neutral2surprise">
+            <div class="sample-card">
+              <div class="sample-head">
+                <span class="pair">
+                  <span class="emo-chip emo-neutral">Neutral</span>
+                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="emo-chip emo-surprised">Surprise</span>
+                </span>
+                <span class="source-audio">
+                  <span class="input-kind kind-source">Source &middot; input to all models</span>
+                  <audio controls preload="none" src="audio/baseline/neutral2surprise/source.wav"></audio>
+                </span>
+              </div>
+              <div class="table-scroll">
+                <table class="io-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Model input</th>
+                      <th>Converted output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="io-model">SGEVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-surprised">Surprise</span><span class="spk-chip">Speaker 0016</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/sgevc.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">DurFlex-EVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-surprised">Surprise</span><span class="spk-chip">Speaker 0016</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/durflex.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">ZEST</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2surprise/zest_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/zest.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">VEVO</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2surprise/vevo_pt_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/vevo_pt.wav"></audio></td>
+                    </tr>
+                    <tr class="row-ours">
+                      <td class="io-model">TRACE-EVC (Ours)</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Jolt it &mdash; <strong>noticeably more startled</strong>, <strong>sharper</strong>, breath catching mid-phrase, eyes snapping open.&rdquo;</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2surprise/ours.wav"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
           <div class="conv-page" id="conv-surprise2neutral" role="tabpanel" aria-labelledby="pager-surprise2neutral">
             <div class="sample-card">
               <div class="sample-head">
@@ -767,6 +555,218 @@
                       <td class="io-model">TRACE-EVC (Ours)</td>
                       <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Turn it <strong>plainer and smoother</strong>, <strong>less sharp and less rushed</strong>, the pacing settling steadier.&rdquo;</span></span></div></td>
                       <td class="io-output"><audio controls preload="none" src="audio/baseline/surprise2neutral/ours.wav"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="conv-page" id="conv-neutral2angry" role="tabpanel" aria-labelledby="pager-neutral2angry">
+            <div class="sample-card">
+              <div class="sample-head">
+                <span class="pair">
+                  <span class="emo-chip emo-neutral">Neutral</span>
+                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="emo-chip emo-angry">Angry</span>
+                </span>
+                <span class="source-audio">
+                  <span class="input-kind kind-source">Source &middot; input to all models</span>
+                  <audio controls preload="none" src="audio/baseline/neutral2angry/source.wav"></audio>
+                </span>
+              </div>
+              <div class="table-scroll">
+                <table class="io-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Model input</th>
+                      <th>Converted output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="io-model">SGEVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-angry">Angry</span><span class="spk-chip">Speaker 0012</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/sgevc.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">DurFlex-EVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-angry">Angry</span><span class="spk-chip">Speaker 0012</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/durflex.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">ZEST</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2angry/zest_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/zest.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">VEVO</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2angry/vevo_pt_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/vevo_pt.wav"></audio></td>
+                    </tr>
+                    <tr class="row-ours">
+                      <td class="io-model">TRACE-EVC (Ours)</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Sharpen it until it sounds <strong>angrier</strong>, the vowels bitten, a half-beat of pressure before each word, <strong>held taut</strong>.&rdquo;</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2angry/ours.wav"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="conv-page" id="conv-angry2neutral" role="tabpanel" aria-labelledby="pager-angry2neutral">
+            <div class="sample-card">
+              <div class="sample-head">
+                <span class="pair">
+                  <span class="emo-chip emo-angry">Angry</span>
+                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="emo-chip emo-neutral">Neutral</span>
+                </span>
+                <span class="source-audio">
+                  <span class="input-kind kind-source">Source &middot; input to all models</span>
+                  <audio controls preload="none" src="audio/baseline/angry2neutral/source.wav"></audio>
+                </span>
+              </div>
+              <div class="table-scroll">
+                <table class="io-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Model input</th>
+                      <th>Converted output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="io-model">SGEVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0016</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/sgevc.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">DurFlex-EVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0016</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/durflex.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">ZEST</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/angry2neutral/zest_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/zest.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">VEVO</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/angry2neutral/vevo_pt_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/vevo_pt.wav"></audio></td>
+                    </tr>
+                    <tr class="row-ours">
+                      <td class="io-model">TRACE-EVC (Ours)</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Cool it down until it settles <strong>calmer than before</strong>, <strong>steadier and softer</strong>, a warmer timbre beneath the surface.&rdquo;</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/angry2neutral/ours.wav"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="conv-page" id="conv-neutral2happy" role="tabpanel" aria-labelledby="pager-neutral2happy">
+            <div class="sample-card">
+              <div class="sample-head">
+                <span class="pair">
+                  <span class="emo-chip emo-neutral">Neutral</span>
+                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="emo-chip emo-happy">Happy</span>
+                </span>
+                <span class="source-audio">
+                  <span class="input-kind kind-source">Source &middot; input to all models</span>
+                  <audio controls preload="none" src="audio/baseline/neutral2happy/source.wav"></audio>
+                </span>
+              </div>
+              <div class="table-scroll">
+                <table class="io-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Model input</th>
+                      <th>Converted output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="io-model">SGEVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-happy">Happy</span><span class="spk-chip">Speaker 0018</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/sgevc.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">DurFlex-EVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-happy">Happy</span><span class="spk-chip">Speaker 0018</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/durflex.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">ZEST</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2happy/zest_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/zest.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">VEVO</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/neutral2happy/vevo_pt_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/vevo_pt.wav"></audio></td>
+                    </tr>
+                    <tr class="row-ours">
+                      <td class="io-model">TRACE-EVC (Ours)</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Brighten it so <strong>a little more joy comes through</strong>, eyes soft, the voice <strong>opening like a window left ajar</strong>, no tempo shift.&rdquo;</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/neutral2happy/ours.wav"></audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="conv-page" id="conv-happy2neutral" role="tabpanel" aria-labelledby="pager-happy2neutral">
+            <div class="sample-card">
+              <div class="sample-head">
+                <span class="pair">
+                  <span class="emo-chip emo-happy">Happy</span>
+                  <span class="pair-arrow" aria-hidden="true">&rarr;</span>
+                  <span class="emo-chip emo-neutral">Neutral</span>
+                </span>
+                <span class="source-audio">
+                  <span class="input-kind kind-source">Source &middot; input to all models</span>
+                  <audio controls preload="none" src="audio/baseline/happy2neutral/source.wav"></audio>
+                </span>
+              </div>
+              <div class="table-scroll">
+                <table class="io-table">
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>Model input</th>
+                      <th>Converted output</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="io-model">SGEVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0014</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/sgevc.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">DurFlex-EVC</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Labels</span><span class="io-value"><span class="emo-chip emo-neutral">Neutral</span><span class="spk-chip">Speaker 0014</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/durflex.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">ZEST</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/happy2neutral/zest_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/zest.wav"></audio></td>
+                    </tr>
+                    <tr>
+                      <td class="io-model">VEVO</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind">Reference</span><span class="io-value"><audio controls preload="none" src="audio/baseline/happy2neutral/vevo_pt_ref.wav"></audio></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/vevo_pt.wav"></audio></td>
+                    </tr>
+                    <tr class="row-ours">
+                      <td class="io-model">TRACE-EVC (Ours)</td>
+                      <td class="io-input"><div class="io-cell"><span class="input-kind kind-ours">Instruction</span><span class="io-value"><span class="io-instruction">&ldquo;Make the audio <strong>slightly quieter</strong>, <strong>flatter and more even</strong>, with a warm stillness beneath the voice.&rdquo;</span></span></div></td>
+                      <td class="io-output"><audio controls preload="none" src="audio/baseline/happy2neutral/ours.wav"></audio></td>
                     </tr>
                   </tbody>
                 </table>
